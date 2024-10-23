@@ -1,67 +1,27 @@
-# 🧠 Dyslexia Detection using Machine Learning
+# 🧠 Dyslexia Detection Using Machine Learning
 
-This repository contains a machine learning-based solution for detecting dyslexia using behavioral and cognitive data. **Dyslexia Detection** leverages advanced machine learning models to identify dyslexic patterns in individuals, aiding in early diagnosis and intervention. The project demonstrates how data-driven approaches can enhance diagnostic processes, potentially providing more accurate and faster results than traditional methods.
-
----
+This repository contains a machine learning-based solution for detecting dyslexia using behavioural and cognitive data. **Dyslexia Detection** leverages advanced machine learning models to identify dyslexic patterns in individuals, aiding in early diagnosis and intervention. The project demonstrates how data-driven approaches can enhance diagnostic processes, potentially providing more accurate and faster results than traditional methods.
 
 ## 📜 Project Overview
 
-Dyslexia is a common learning disability that affects reading, spelling, and writing. Early detection is crucial for timely intervention and improving educational outcomes. This project applies various machine learning techniques to build a reliable system for dyslexia detection. The solution processes behavioral data (e.g., reading speed, phonological assessments) to predict whether an individual has dyslexia.
+
+Dyslexia is a neurological disorder which affects about 5-10% of the total population which amounts to about 700 million worldwide. It is a language-based learning disability. Its symptoms are different for different people. It generally affects how people read and write. Among the total population of people having difficulties with reading, writing, speaking and spelling, about 70-80% suffer from some level of dyslexia. Dyslexia is generally defined by a spectrum of difficulties. The current methods of detecting dyslexia is based on a series of reading, writing and speaking tests. The drawback of this system of testing is that they are quite expensive and not available everywhere. We developed a technique for detecting dyslexia based on eye tracking using unsupervised machine-learning classification techniques. There has already been some research has been done in the domain of detecting this condition by analysing eye-tracking data. We took some inspiration from a study titled: "Screening for Dyslexia Using Eye Tracking during Reading", conducted by Nilsson Benfatto and his group. Their work relied on extracting features from the eye-tracking data. They developed a classification algorithm based on a supervised learning method. The data that they worked on was available online and we used the same data for building our classifier. The data consisted of eye-tracking readings of 98 dyslexic candidates and 88 non-dyslexic/control candidates. We wanted to approach the problem from a non-supervised learning perspective. We were curious to see if we could differentiate Dyslexic from non-dyslexic based on the data itself and not relying on the existing labels to train our classifier. We developed a unique approach to analyze eye-tracking data based on the nature of the frequency spectrum.
 
 ---
-
 ## 🎯 Key Objectives
 
-- **Early Detection**: Detect dyslexia in individuals at an early stage through behavioral and cognitive analysis.
+- **Early Detection**: Detect dyslexia in individuals at an early stage through behavioural and cognitive analysis.
 - **Accuracy**: Provide high-accuracy predictions using advanced machine learning models.
 - **Scalability**: Build a scalable solution that can handle data from multiple individuals and environments.
 
 ---
+## 🚀 Highlights:
 
-## 🧑‍💻 Methodology
-
-### 1. **Data Collection & Preprocessing**
-   - **Data Sources**: Behavioral data such as reading speed, phonological assessments, and comprehension tests.
-   - **Preprocessing**: Cleaning the data, handling missing values, normalization, and feature engineering to extract relevant patterns.
-   
-### 2. **Machine Learning Models**
-   - **Support Vector Machines (SVM)**: Effective for binary classification tasks like dyslexia detection.
-   - **Random Forest**: Used for feature importance analysis and generating robust predictions.
-   - **Convolutional Neural Networks (CNN)**: Applied for visual data (e.g., eye-tracking) to analyze patterns in visual attention and reading behavior.
-   - **Logistic Regression**: Used as a baseline model for comparison.
-
-### 3. **Model Evaluation**
-   - Models are evaluated using the following metrics:
-     - **Accuracy**
-     - **Precision**
-     - **Recall**
-     - **F1 Score**
-   - A confusion matrix is generated to measure performance and evaluate false positives and negatives.
-
----
-
-## 📊 Dataset
-
-This project uses a specialized dataset containing behavioral and cognitive data relevant to dyslexia. The data includes:
-- **Reading Speed**
-- **Comprehension Scores**
-- **Phonological Assessments**
-- **Eye-tracking Data**
-
-The dataset is split into training and testing sets for model validation.
-
----
-
-## 🔥 Results
-
-The implemented models showed promising results in detecting dyslexia patterns with high accuracy:
-- **Accuracy**: 95%
-- **Precision**: 92%
-- **Recall**: 91%
-- **F1 Score**: 91%
-
-The **Support Vector Machine (SVM)** model performed the best, offering a balance of accuracy and recall, while **Random Forest** provided valuable insights into feature importance.
-
+- We used the Eye tracking data set for two groups: control and Dyslexic. Since the reading speed of each person is different, the samples in the data set have varying lengths.
+- We used a binning approach to tackle the unequal lengths of data in two approaches:
+- Binning on Spectral Data: To get equal-length vectors which encompass all temporal information.
+- Short time Fourier Transform: Binning on temporal data and then considering the frequency components to evaluate the temporal significance of certain spectral values.
+- PCA: Principal Component Analysis on binned data to reduce the number of dimensions.
 ---
 
 ## 🛠️ Tools & Technologies
@@ -84,13 +44,6 @@ The **Support Vector Machine (SVM)** model performed the best, offering a balanc
 - **Mobile Application**: Build a mobile-based solution for educators and parents to easily screen children for dyslexia.
 
 ---
-
-## 🏆 Conclusion
-
-This **Dyslexia Detection** project provides a strong foundation for leveraging machine learning in the healthcare and education sectors. The models built here demonstrate high accuracy and reliability, showcasing the potential for data-driven solutions to significantly improve early detection of dyslexia. Future improvements include expanding the data types used and incorporating additional machine learning techniques.
-
----
-
 
 
 
